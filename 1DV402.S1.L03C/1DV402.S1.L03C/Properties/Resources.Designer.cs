@@ -88,6 +88,15 @@ namespace _1DV402.S1.L03C.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to FEL! &apos;{0}&apos; är ett för stort tal!.
+        /// </summary>
+        internal static string High_Number_Error {
+            get {
+                return ResourceManager.GetString("High_Number_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Medianlön:{0, 16:c0}.
         /// </summary>
         internal static string Median_Salary {
@@ -102,6 +111,15 @@ namespace _1DV402.S1.L03C.Properties {
         internal static string Number_Error {
             get {
                 return ResourceManager.GetString("Number_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slut på minne, {0} är ett för stort tal för din dator, provar {1} istället!.
+        /// </summary>
+        internal static string OutOfMemory_Error {
+            get {
+                return ResourceManager.GetString("OutOfMemory_Error", resourceCulture);
             }
         }
         

@@ -57,6 +57,10 @@ namespace _1DV402.S1.L03C
                     }
                     return int.Parse(number);
                 }
+                catch (OverflowException)
+                {
+                    ViewMessage(String.Format(Properties.Resources.High_Number_Error, number), ConsoleColor.Red);
+                }
                 catch
                 {
                     ViewMessage(String.Format(Properties.Resources.Number_Error, number), ConsoleColor.Red);
@@ -66,12 +70,24 @@ namespace _1DV402.S1.L03C
 
         private static int[] ReadSalaries(int count)
         {
-            int[] salaries = new int[count];
-            for (int salaryNumber = 0; salaryNumber < salaries.Length; salaryNumber++)
+            int[] salaries;
+            while (true)
             {
-                salaries[salaryNumber] = ReadInt(String.Format(Properties.Resources.Salary_Number_Prompt, salaryNumber + 1));
+                try
+                {
+                    salaries = new int[count];
+                    for (int salaryNumber = 0; salaryNumber < salaries.Length; salaryNumber++)
+                    {
+                        salaries[salaryNumber] = ReadInt(String.Format(Properties.Resources.Salary_Number_Prompt, salaryNumber + 1));
+                    }
+                    return salaries;
+                }
+                catch (OutOfMemoryException) //På min dator, om man använde talet 99999999 så skickades ett OutOfMemoryException eftersom arrayen blev för stor. Detta är en ganska ghetto lösning på det, men men.
+                {
+                    ViewMessage(String.Format(Properties.Resources.OutOfMemory_Error, count, count / 10), ConsoleColor.Red);
+                    count /= 10;
+                }
             }
-            return salaries;
         }
 
         private static void ViewMessage(string message,
