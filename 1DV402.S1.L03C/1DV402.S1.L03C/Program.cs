@@ -8,6 +8,10 @@ namespace _1DV402.S1.L03C
 {
     class Program
     {
+        /// <summary>
+        /// Core of the program
+        /// </summary>
+        /// <param name="args">Command-line arguments</param>
         private static void Main(string[] args)
         {
             Console.Title = Properties.Resources.Console_Title;
@@ -32,6 +36,10 @@ namespace _1DV402.S1.L03C
             } while (IsContinuing());
         }
 
+        /// <summary>
+        /// Asks the user if the program should continue to run.
+        /// </summary>
+        /// <returns>Retúrns true if the program should continue to run, false if it shouldn't</returns>
         private static bool IsContinuing()
         {
             Console.WriteLine();
@@ -43,6 +51,12 @@ namespace _1DV402.S1.L03C
             return true;
         }
 
+        /// <summary>
+        /// Asks the user for an Int value and returns it.
+        /// Will continue to ask the user for a correct Int value until given.
+        /// </summary>
+        /// <param name="prompt">The prompt shown to the user</param>
+        /// <returns>Returns the int the user submitted</returns>
         private static int ReadInt(string prompt)
         {
             while (true)
@@ -68,6 +82,11 @@ namespace _1DV402.S1.L03C
             }
         }
 
+        /// <summary>
+        /// Asks the user for a defined number of int values.
+        /// </summary>
+        /// <param name="count">The number of int values the user should submit</param>
+        /// <returns>Returns an array of the int values the user submitted</returns>
         private static int[] ReadSalaries(int count)
         {
             int[] salaries;
@@ -82,14 +101,20 @@ namespace _1DV402.S1.L03C
                     }
                     return salaries;
                 }
-                catch (OutOfMemoryException) //På min dator, om man använde talet 99999999 så skickades ett OutOfMemoryException eftersom arrayen blev för stor. Detta är en ganska ghetto lösning på det, men men.
+                catch (OutOfMemoryException) //If the array holds too many items, an OutOfMemoryException will be thrown. No one should enter that many salaries anyway though.
                 {
                     ViewMessage(String.Format(Properties.Resources.OutOfMemory_Error, count, count / 10), ConsoleColor.Red);
-                    count /= 10;
+                    count /= 10; //This solution will, if the user REALLY wants to enter that many salaries, probably be pretty annoying. It's a feature though, not a bug.
                 }
             }
         }
 
+        /// <summary>
+        /// Shows a message to the user with a colored background and text
+        /// </summary>
+        /// <param name="message">The message that should be shown to the user</param>
+        /// <param name="backgroundColor">The background color to be used for the text. Default is blue</param>
+        /// <param name="foregroundColor">The color to be used for the text. Default is white</param>
         private static void ViewMessage(string message,
             ConsoleColor backgroundColor = ConsoleColor.Blue,
             ConsoleColor foregroundColor = ConsoleColor.White)
@@ -102,6 +127,10 @@ namespace _1DV402.S1.L03C
             Console.WriteLine();
         }
 
+        /// <summary>
+        /// Makes calculations with the salaries given and shows the result
+        /// </summary>
+        /// <param name="salaries">The salaries that should be included in the calculation</param>
         private static void ViewResult(int[] salaries)
         {
             Console.WriteLine(Properties.Resources.Result_Line);
