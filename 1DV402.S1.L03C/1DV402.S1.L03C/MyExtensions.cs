@@ -27,7 +27,7 @@ namespace _1DV402.S1.L03C
         {
             var query = from number in source orderby number select number;
             int[] sortedSource = query.ToArray();
-            if (sortedSource.Length % 2 > 0) //if the array contains an even number of values
+            if (sortedSource.Length % 2 > 0) //if the array contains an uneven number of values
             {
                 return sortedSource[(sortedSource.Length / 2)];
             }

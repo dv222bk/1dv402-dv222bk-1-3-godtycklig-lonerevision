@@ -6,3 +6,11 @@ G:\visual studio 2013\Projects\1DV402.S1.L03C\1DV402.S1.L03C\obj\Debug\1DV402.S1
 G:\visual studio 2013\Projects\1DV402.S1.L03C\1DV402.S1.L03C\obj\Debug\1DV402.S1.L03C.exe
 G:\visual studio 2013\Projects\1DV402.S1.L03C\1DV402.S1.L03C\obj\Debug\1DV402.S1.L03C.pdb
 G:\visual studio 2013\Projects\1DV402.S1.L03C\1DV402.S1.L03C\obj\Debug\1DV402.S1.L03C.csprojResolveAssemblyReference.cache
+G:\gitHub\1dv402-dv222bk-1-3-godtycklig-lonerevision\1DV402.S1.L03C\1DV402.S1.L03C\bin\Debug\1DV402.S1.L03C.exe.config
+G:\gitHub\1dv402-dv222bk-1-3-godtycklig-lonerevision\1DV402.S1.L03C\1DV402.S1.L03C\obj\Debug\1DV402.S1.L03C.exe
+G:\gitHub\1dv402-dv222bk-1-3-godtycklig-lonerevision\1DV402.S1.L03C\1DV402.S1.L03C\obj\Debug\1DV402.S1.L03C.pdb
+G:\gitHub\1dv402-dv222bk-1-3-godtycklig-lonerevision\1DV402.S1.L03C\1DV402.S1.L03C\bin\Debug\1DV402.S1.L03C.exe
+G:\gitHub\1dv402-dv222bk-1-3-godtycklig-lonerevision\1DV402.S1.L03C\1DV402.S1.L03C\bin\Debug\1DV402.S1.L03C.pdb
+G:\gitHub\1dv402-dv222bk-1-3-godtycklig-lonerevision\1DV402.S1.L03C\1DV402.S1.L03C\obj\Debug\1DV402.S1.L03C.csprojResolveAssemblyReference.cache
+G:\gitHub\1dv402-dv222bk-1-3-godtycklig-lonerevision\1DV402.S1.L03C\1DV402.S1.L03C\obj\Debug\_1DV402.S1.L03C.Properties.Resources.resources
+G:\gitHub\1dv402-dv222bk-1-3-godtycklig-lonerevision\1DV402.S1.L03C\1DV402.S1.L03C\obj\Debug\1DV402.S1.L03C.csproj.GenerateResource.Cache
